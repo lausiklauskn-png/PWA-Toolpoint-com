@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PWA Toolpoint — weiter zu pwa-toolpoint.de</title>
+<meta name="robots" content="noindex, follow">
+<!-- Für Suchmaschinen: die .de ist die eine echte Adresse, die .com nur der Weg dorthin. -->
+<link rel="canonical" href="https://pwa-toolpoint.de/">
+<!-- Weg 1: ohne JavaScript. Greift immer, auch bei abgeschaltetem Skript. -->
+<meta http-equiv="refresh" content="0; url=https://pwa-toolpoint.de/">
+<style>
+  body{margin:0;background:#101418;color:#e7edf3;
+       font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       display:flex;min-height:100vh;align-items:center;justify-content:center;padding:24px}
+  .k{max-width:34rem;text-align:center}
+  a{color:#4aa3df}
+</style>
+</head>
+<body>
+<div class="k">
+  <p>Diese Seite liegt auf <strong>pwa-toolpoint.de</strong>.</p>
+  <p>Du wirst gleich weitergeleitet. Falls nicht:
+     <a id="ziel" href="https://pwa-toolpoint.de/">https://pwa-toolpoint.de/</a></p>
+</div>
+<script>
+/* Weg 2: mit JavaScript, und dabei den aufgerufenen Pfad mitnehmen —
+   damit /impressum.html auf der .com auch auf /impressum.html der .de landet
+   und nicht auf der Startseite. Fail-soft: geht das schief, wirkt der
+   meta-refresh oben. */
+(function () {
+  try {
+    var ziel = "https://pwa-toolpoint.de" +
+               location.pathname + location.search + location.hash;
+    var a = document.getElementById("ziel");
+    if (a) { a.href = ziel; a.textContent = ziel; }
+    location.replace(ziel);
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>
