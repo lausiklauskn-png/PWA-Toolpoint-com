@@ -31,3 +31,11 @@ Der Pfad reist mit: `pwa-toolpoint.com/impressum.html` landet auf
 2. **Hier im Repo** unter *Settings → Pages → Custom domain* `pwa-toolpoint.com`
    eintragen. GitHub legt dann selbst eine `CNAME`-Datei an.
 3. Sobald das Zertifikat da ist: *Enforce HTTPS* anhaken.
+
+---
+
+## Rechte
+
+Rechteinhaber ist Klaus Nitzsche. Welche Lizenz gilt und welche Rolle die
+KI-Werkzeuge hatten, steht in [`RECHTE.md`](RECHTE.md); der Lizenztext in
+[`LICENSE`](LICENSE).
